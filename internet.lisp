@@ -39,7 +39,7 @@
 
 (defun free-email (&optional first-name last-name)
   (let ((username (user-name first-name last-name))
-        (domain (random-elt (locale-list '*free-email-domains*))))
+        (domain (random-elt (locale-var '*free-email-domains*))))
     (format nil "~A@~A" username domain)))
 
 (defun safe-email (&optional first-name last-name)
@@ -52,7 +52,7 @@
    (transliterate-username (or last-name (faker/person:last-name)))))
 
 (defun domain-name (&optional last-name)
-  (strcat (domain-word last-name) "." (random-elt (locale-list '*tld*))))
+  (strcat (domain-word last-name) "." (random-elt (locale-var '*tld*))))
 
 (defun ipv4 ()
   (format nil "~D.~D.~D.~D"

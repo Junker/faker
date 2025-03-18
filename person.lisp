@@ -21,15 +21,15 @@
       lst))
 
 (defun first-name (&optional (gender :generic))
-  (random-elt (list-by-gender (locale-list '*first-name*)
+  (random-elt (list-by-gender (locale-var '*first-name*)
                               gender)))
 
 (defun last-name (&optional (gender :generic))
-  (random-elt (list-by-gender (locale-list '*last-name*)
+  (random-elt (list-by-gender (locale-var '*last-name*)
                               gender)))
 
 (defun middle-name (&optional (gender :generic))
-  (random-elt (list-by-gender (locale-list '*middle-name*)
+  (random-elt (list-by-gender (locale-var '*middle-name*)
                               gender)))
 
 (defun full-name (&optional (gender :generic))
@@ -38,16 +38,16 @@
           (last-name gender)))
 
 (defun prefix (&optional (gender :generic))
-  (random-elt (list-by-gender (locale-list '*prefix*) gender)))
+  (random-elt (list-by-gender (locale-var '*prefix*) gender)))
 
 (defun job-title ()
-  (random-elt (locale-list '*job-title*)))
+  (random-elt (locale-var '*job-title*)))
 
 (defun job-descriptor ()
-  (random-elt (locale-list '*job-descriptor*)))
+  (random-elt (locale-var '*job-descriptor*)))
 
 (defun job-area ()
-  (random-elt (locale-list '*job-area*)))
+  (random-elt (locale-var '*job-area*)))
 
 (defun zodiac-sign ()
-  (random-elt (locale-list '*western-zodiac*)))
+  (random-elt (locale-var '*western-zodiac*)))

@@ -3,4 +3,4 @@
   (:export :*locale*))
 (in-package :faker)
 
-(defparameter *locale* :en)
+(defparameter *locale* :en-us)

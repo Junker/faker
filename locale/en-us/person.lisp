@@ -1,10 +1,10 @@
-(defpackage faker/locale/en/person
+(defpackage faker/locale/en-us/person
   (:use #:cl)
   (:export #:*sex*
            #:*prefix*
            #:*suffix*
            #:*first-name*))
-(in-package :faker/locale/en/person)
+(in-package :faker/locale/en-us/person)
 
 (defvar *sex* '("female" "male"))
 

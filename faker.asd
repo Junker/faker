@@ -8,7 +8,16 @@
   :source-control (:git "https://github.com/Junker/faker.git")
   :components ((:file "faker")
                (:module "locale"
-                :components ((:module "en"
+                :components ((:module "de-de"
+                              :components ((:file "person")
+                                           (:file "internet")))
+                             (:module "en-us"
+                              :components ((:file "person")
+                                           (:file "internet")))
+                             (:module "es-es"
+                              :components ((:file "person")
+                                           (:file "internet")))
+                             (:module "fr-fr"
                               :components ((:file "person")
                                            (:file "internet")))))
                (:file "util")
