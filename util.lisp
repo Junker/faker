@@ -2,7 +2,9 @@
   (:use #:cl
         #:alexandria)
   (:import-from #:uiop
-                #:strcat)
+                #:strcat
+                #:find-package*
+                #:find-symbol*)
   (:export #:locale-var))
 (in-package :faker/util)
 
@@ -15,7 +17,7 @@
          (pack-subname (subseq pack-name
                                (1+ (position #\/ pack-name)))))
     (symbol-value
-     (find-symbol (string name)
-                  (find-package (format nil "FAKER/LOCALE/~A/~A"
-                                        locale
-                                        pack-subname))))))
+     (find-symbol* name
+                   (find-package* (format nil "FAKER/LOCALE/~A/~A"
+                                          locale
+                                          pack-subname))))))
